@@ -11,7 +11,7 @@ exports.requestdata=(req,res)=>{
   const {talbename,competition} =req.body
   let sqlstr=`select * from ${talbename}`
   if(!type) sqlstr+=`where competition=${competition}`
-
+  let hhh
   db.query(sqlstr, (err, results) => {
     // 查询数据失败
     if (err) return console.log(err.message)
